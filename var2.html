@@ -1,0 +1,25 @@
+<style>
+  #abc{color:#f00;}
+  .efg{border: 1px solid }
+  .efg em{font-size: 1.5em}
+  input.efg{background-color:#ccc}
+</style>
+
+<h2>DOM(要素)に作用</h2>
+<p id="abc">こんにちは</p>
+<p class="efg"><em>123</em>456</p>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+<script>
+//生のjsでは
+var h = '<em>HELLO</em>';
+document.getElementById('abc').innerHTML=h;
+
+//jqueryを使って書いた場合
+  $('#abc').html(h);
+   var efg = $('.efg em').html;
+</script>

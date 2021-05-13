@@ -1,0 +1,37 @@
+<!-- 04_js\renshu\attr.html -->
+<style>.product{width: 200px}</style>
+<select id="blson">
+	<option>おもて</option>
+	<option>うら</option>
+	<option>'おもてなし'</option>
+</select>
+<br>
+
+<img class="product" src="e5b6394bbd7c.jpg" alt="ブルゾン">
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+// HTML 文書の読み込みと解析が完了したとき	
+
+$("#blson").on("change", function () {
+		var choice = $(this).val();
+
+		if(choice == 'うら'){
+			console.log(  $(".product").attr('alt') );
+
+		 	$(".product").attr('src','e5b6392319a0.jpg').attr('alt','うら');	
+
+		 	$(".product").removeAttr('class') 
+
+		}else{
+		 	$(".product").attr('src','e5b6394bbd7c.jpg').attr('alt','おもて');
+
+		}
+	
+	});
+
+
+});
+</script>
